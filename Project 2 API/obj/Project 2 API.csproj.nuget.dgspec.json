@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\temp\\source\\repos\\Project 2 API\\Project 2 API.csproj": {}
+    "C:\\Users\\Temp\\Source\\Repos\\CMPG-323-Project-2\\Project 2 API\\Project 2 API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\temp\\source\\repos\\Project 2 API\\Project 2 API.csproj": {
+    "C:\\Users\\Temp\\Source\\Repos\\CMPG-323-Project-2\\Project 2 API\\Project 2 API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\temp\\source\\repos\\Project 2 API\\Project 2 API.csproj",
+        "projectUniqueName": "C:\\Users\\Temp\\Source\\Repos\\CMPG-323-Project-2\\Project 2 API\\Project 2 API.csproj",
         "projectName": "Project 2 API",
-        "projectPath": "C:\\Users\\temp\\source\\repos\\Project 2 API\\Project 2 API.csproj",
-        "packagesPath": "C:\\Users\\temp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\temp\\source\\repos\\Project 2 API\\obj\\",
+        "projectPath": "C:\\Users\\Temp\\Source\\Repos\\CMPG-323-Project-2\\Project 2 API\\Project 2 API.csproj",
+        "packagesPath": "C:\\Users\\Temp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Temp\\Source\\Repos\\CMPG-323-Project-2\\Project 2 API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\temp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Temp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,6 +59,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.28, )"
+            },
+            "Microsoft.OpenApi": {
+              "target": "Package",
+              "version": "[1.3.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
             }
           },
           "imports": [
