@@ -50,7 +50,7 @@ namespace Project_2_API
                 endpoints.MapControllers();
             });
             app.UseSwagger(); 
-            app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/v2/swagger.json", "MyTest Demo"));
+            app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/v2/swagger.json", "Project 2 API"));
 
 
         }

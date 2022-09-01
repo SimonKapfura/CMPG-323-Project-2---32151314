@@ -6372,11 +6372,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Temp\\Source\\Repos\\CMPG-323-Project-2\\Project 2 API\\Project 2 API.csproj",
+      "projectUniqueName": "C:\\Users\\Temp\\Source\\Repos\\CMPG-323-Project-2--32151314\\Project 2 API\\Project 2 API.csproj",
       "projectName": "Project 2 API",
-      "projectPath": "C:\\Users\\Temp\\Source\\Repos\\CMPG-323-Project-2\\Project 2 API\\Project 2 API.csproj",
+      "projectPath": "C:\\Users\\Temp\\Source\\Repos\\CMPG-323-Project-2--32151314\\Project 2 API\\Project 2 API.csproj",
       "packagesPath": "C:\\Users\\Temp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Temp\\Source\\Repos\\CMPG-323-Project-2\\Project 2 API\\obj\\",
+      "outputPath": "C:\\Users\\Temp\\Source\\Repos\\CMPG-323-Project-2--32151314\\Project 2 API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Temp\\AppData\\Roaming\\NuGet\\NuGet.Config",
