@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using ConnectedOfficeAPI.Models;
 
 namespace ConnectedOfficeAPI
 {
@@ -27,6 +28,7 @@ namespace ConnectedOfficeAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<ConnectedOfficeContext>(options => options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
             services.AddSwaggerGen(options => { options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Connected Office API", Version = "v1", Description = "Live Connected Office API", }); });
         }
 
