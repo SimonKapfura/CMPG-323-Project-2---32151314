@@ -26,6 +26,7 @@ namespace ConnectedOfficeAPI
 {
     public class Startup
     {
+        private IConfiguration configuration;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -37,12 +38,12 @@ namespace ConnectedOfficeAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ConnectedOfficeDB")));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(this.Configuration.GetConnectionString("ConnectedOfficeDB")));
 
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v2", new OpenApiInfo
                 {
-                    Title = "JWTToken_Auth_API",
+                    Title = "JWTToken_Auth_Cnnected_Office_API",
                     Version = "v2"
                 });
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
