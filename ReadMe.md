@@ -7,4 +7,7 @@ Smart devices such as voice controllers, security lights, smart locks and Wi-Fi-
 
 ‌Atlassian (2022). .gitignore file - ignoring files in Git | Atlassian Git Tutorial. [online] Atlassian. Available at: https://www.atlassian.com/git/tutorials/saving-changes/gitignore [Accessed 3 Sep. 2022].
 
+bricelam (2021). Connection Strings - EF Core. [online] Microsoft.com. Available at: https://docs.microsoft.com/en-gb/ef/core/miscellaneous/connection-strings [Accessed 3 Sep. 2022].
+
+‌
 ‌
