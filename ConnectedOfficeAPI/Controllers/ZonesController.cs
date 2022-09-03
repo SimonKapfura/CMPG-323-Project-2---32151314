@@ -7,10 +7,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ConnectedOfficeAPI.Models;
+using ConnectedOfficeAPI.Authentication;
 
 namespace ConnectedOfficeAPI.Controllers
 {
-    [Authorize]
+    [Authorize (Roles = UserRoles.Admin)]
     [Route("api/[controller]")]
     [ApiController]
     public class ZonesController : ControllerBase
