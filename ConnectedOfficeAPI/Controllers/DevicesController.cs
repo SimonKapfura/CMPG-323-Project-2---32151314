@@ -122,5 +122,34 @@ namespace ConnectedOfficeAPI.Controllers
         {
             return _context.Device.Any(e => e.DeviceId == id);
         }
+
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> PatchDevice(Guid id, Device device)
+        {
+            if (id != device.DeviceId)
+            {
+                return BadRequest();
+            }
+
+            _context.Update(device);
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!DeviceExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
     }
 }
