@@ -151,5 +151,18 @@ namespace ConnectedOfficeAPI.Controllers
 
             return NoContent();
         }
+
+        [HttpGet("{id}/Devices")]
+        public async Task<ActionResult<IEnumerable<Device>>> GetDevicesByZone(Guid id)
+        {
+            if (ZoneExists(id))
+            {
+                return await _context.Device.Where(a => a.ZoneId == id).ToListAsync();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
     }
 }
