@@ -26,7 +26,7 @@ namespace ConnectedOfficeAPI
 {
     public class Startup
     {
-        private IConfiguration configuration;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -38,16 +38,18 @@ namespace ConnectedOfficeAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(this.Configuration.GetConnectionString("ConnectedOfficeDB")));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("name=ConnectionStrings:ConnStr"));
 
-            services.AddSwaggerGen(c => {
-                c.SwaggerDoc("v2", new OpenApiInfo
+            services.AddDbContext<ConnectedOfficeContext>(options => options.UseSqlServer("name=ConnectionStrings:ConnStr"));
+
+            services.AddSwaggerGen(options => {
+                options.SwaggerDoc("v2", new OpenApiInfo
                 {
-                    Title = "Connected Office",
+                    Title = "Connected Office API",
                     Version = "v2",
                     Description = "Project 2 API with JWT Authentication"
                 });
-                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+                options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
                 {
                     Name = "Authorization",
                     Type = SecuritySchemeType.ApiKey,
@@ -56,7 +58,7 @@ namespace ConnectedOfficeAPI
                     In = ParameterLocation.Header,
                     Description = "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 1safsfsdfdfd\"",
                 });
-                c.AddSecurityRequirement(new OpenApiSecurityRequirement {
+                options.AddSecurityRequirement(new OpenApiSecurityRequirement {
                     {
                         new OpenApiSecurityScheme {
                             Reference = new OpenApiReference {
@@ -68,11 +70,7 @@ namespace ConnectedOfficeAPI
                      }
                 });
             });
-
-            services.AddDbContext<ConnectedOfficeContext>(options => options.UseSqlServer(this.Configuration.GetConnectionString("ConnectedOfficeDB")));
-            services.AddSwaggerGen(options => { options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Connected Office API", Version = "v1", Description = "Live Connected Office API", }); });
-            // For Entity Framework  
-            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ConnStr")));
+            
 
             // For Identity  
             services.AddIdentity<ApplicationUser, IdentityRole>()

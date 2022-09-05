@@ -11,7 +11,6 @@ namespace ConnectedOfficeAPI.Models
 {
     public partial class ConnectedOfficeContext : DbContext
     {
-        private IConfiguration Configuration;
         public ConnectedOfficeContext()
         {
         }
@@ -29,7 +28,7 @@ namespace ConnectedOfficeAPI.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(this.Configuration.GetConnectionString("ConnectedOfficeDB"));
+                optionsBuilder.UseSqlServer("name=ConnectionStrings:DefaultConnection");
             }
         }
 
