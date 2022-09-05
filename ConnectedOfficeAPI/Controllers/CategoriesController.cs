@@ -118,8 +118,6 @@ namespace ConnectedOfficeAPI.Controllers
             return category;
         }
 
-<<<<<<< Updated upstream
-=======
         //additional methods
         //PATCH: api/Categories/5
         [HttpPatch("{id}")]
@@ -177,7 +175,7 @@ namespace ConnectedOfficeAPI.Controllers
                 return new ValueTask<String>(NotFound().ToString());
             }
         }
->>>>>>> Stashed changes
+
         private bool CategoryExists(Guid id)
         {
             return _context.Category.Any(e => e.CategoryId == id);

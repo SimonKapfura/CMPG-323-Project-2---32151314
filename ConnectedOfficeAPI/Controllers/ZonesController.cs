@@ -122,5 +122,47 @@ namespace ConnectedOfficeAPI.Controllers
         {
             return _context.Zone.Any(e => e.ZoneId == id);
         }
+
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> PatchZone(Guid id, Zone zone)
+        {
+            if (id != zone.ZoneId)
+            {
+                return BadRequest();
+            }
+
+            _context.Update(zone);
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ZoneExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+        [HttpGet("{id}/Devices")]
+        public async Task<ActionResult<IEnumerable<Device>>> GetDevicesByZone(Guid id)
+        {
+            if (ZoneExists(id))
+            {
+                return await _context.Device.Where(a => a.ZoneId == id).ToListAsync();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
     }
 }

@@ -9,5 +9,7 @@ Smart devices such as voice controllers, security lights, smart locks and Wi-Fi-
 
 bricelam (2021). Connection Strings - EF Core. [online] Microsoft.com. Available at: https://docs.microsoft.com/en-gb/ef/core/miscellaneous/connection-strings [Accessed 3 Sep. 2022].
 
+‌mstrand (2016). How to pass multiple parameters to a get method in ASP.NET Core. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/36280947/how-to-pass-multiple-parameters-to-a-get-method-in-asp-net-core [Accessed 4 Sep. 2022].
+
 ‌
 ‌
