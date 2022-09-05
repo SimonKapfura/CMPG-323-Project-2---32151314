@@ -11,7 +11,7 @@ using ConnectedOfficeAPI.Authentication;
 
 namespace ConnectedOfficeAPI.Controllers
 {
-    [Authorize(Roles = UserRoles.Admin)]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class DevicesController : ControllerBase
