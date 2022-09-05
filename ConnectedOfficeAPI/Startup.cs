@@ -43,8 +43,9 @@ namespace ConnectedOfficeAPI
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v2", new OpenApiInfo
                 {
-                    Title = "JWTToken_Auth_Cnnected_Office_API",
-                    Version = "v2"
+                    Title = "Connected Office",
+                    Version = "v2",
+                    Description = "Project 2 API with JWT Authentication"
                 });
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
                 {

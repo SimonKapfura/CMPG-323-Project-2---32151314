@@ -44,6 +44,20 @@ namespace ConnectedOfficeAPI.Controllers
             return zone;
         }
 
+        // GET: api/Zones/5/Devices
+        [HttpGet("{id}/Devices")]
+        public async Task<ActionResult<IEnumerable<Device>>> GetDevicesByZone(Guid id)
+        {
+            if (ZoneExists(id))
+            {
+                return await _context.Device.Where(a => a.ZoneId == id).ToListAsync();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
         // PUT: api/Zones/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
@@ -118,11 +132,7 @@ namespace ConnectedOfficeAPI.Controllers
             return zone;
         }
 
-        private bool ZoneExists(Guid id)
-        {
-            return _context.Zone.Any(e => e.ZoneId == id);
-        }
-
+        // PATCH: api/Zones/5
         [HttpPatch("{id}")]
         public async Task<IActionResult> PatchZone(Guid id, Zone zone)
         {
@@ -152,17 +162,9 @@ namespace ConnectedOfficeAPI.Controllers
             return NoContent();
         }
 
-        [HttpGet("{id}/Devices")]
-        public async Task<ActionResult<IEnumerable<Device>>> GetDevicesByZone(Guid id)
+        private bool ZoneExists(Guid id)
         {
-            if (ZoneExists(id))
-            {
-                return await _context.Device.Where(a => a.ZoneId == id).ToListAsync();
-            }
-            else
-            {
-                return NotFound();
-            }
+            return _context.Zone.Any(e => e.ZoneId == id);
         }
     }
 }

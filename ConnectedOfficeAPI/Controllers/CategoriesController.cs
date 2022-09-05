@@ -44,6 +44,34 @@ namespace ConnectedOfficeAPI.Controllers
             return category;
         }
 
+        // GET: api/Categories/5/Count
+        [HttpGet("{id}/Zones/Count")]
+        public ValueTask<String> GetZonesByCategory(Guid id)
+        {
+            if (CategoryExists(id))
+            {
+                return new ValueTask<String>(_context.Device.Where(a => a.CategoryId == a.ZoneId).Count().ToString());
+            }
+            else
+            {
+                return new ValueTask<String>(NotFound().ToString());
+            }
+        }
+
+        //GET: api/Categories/5/Devices
+        [HttpGet("{id}/Devices")]
+        public async Task<ActionResult<IEnumerable<Device>>> GetDevicesByCayegory(Guid id)
+        {
+            if (CategoryExists(id))
+            {
+                return await _context.Device.Where(a => a.CategoryId == id).ToListAsync();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
         // PUT: api/Categories/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
@@ -118,7 +146,6 @@ namespace ConnectedOfficeAPI.Controllers
             return category;
         }
 
-        //additional methods
         //PATCH: api/Categories/5
         [HttpPatch("{id}")]
         public async Task<IActionResult> PatchCategory(Guid id, Category category)
@@ -147,34 +174,7 @@ namespace ConnectedOfficeAPI.Controllers
             }
 
             return NoContent();
-        }
-
-        //GET: api/Categories/5/Devices
-        [HttpGet("{id}/Devices")]
-        public async Task<ActionResult<IEnumerable<Device>>> GetDevicesByCayegory(Guid id)
-        {
-            if (CategoryExists(id))
-            {
-                return await _context.Device.Where(a => a.CategoryId == id).ToListAsync();
-            }
-            else
-            {
-                return NotFound();
-            }
-        }
-
-        [HttpGet("{id}/Zones/Count")]
-        public ValueTask<String> GetZonesByCategory(Guid id)
-        {
-            if(CategoryExists(id))
-            {
-                return new ValueTask<String>(_context.Device.Where(a => a.CategoryId == a.ZoneId).Count().ToString());
-            }
-            else
-            {
-                return new ValueTask<String>(NotFound().ToString());
-            }
-        }
+        }        
 
         private bool CategoryExists(Guid id)
         {

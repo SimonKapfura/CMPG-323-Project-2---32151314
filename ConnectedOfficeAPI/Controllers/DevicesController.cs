@@ -118,11 +118,7 @@ namespace ConnectedOfficeAPI.Controllers
             return device;
         }
 
-        private bool DeviceExists(Guid id)
-        {
-            return _context.Device.Any(e => e.DeviceId == id);
-        }
-
+        // PATCH: api/Devices/5
         [HttpPatch("{id}")]
         public async Task<IActionResult> PatchDevice(Guid id, Device device)
         {
@@ -150,6 +146,10 @@ namespace ConnectedOfficeAPI.Controllers
             }
 
             return NoContent();
+        }
+        private bool DeviceExists(Guid id)
+        {
+            return _context.Device.Any(e => e.DeviceId == id);
         }
     }
 }
