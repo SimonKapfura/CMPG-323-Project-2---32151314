@@ -68,7 +68,7 @@ namespace ConnectedOfficeAPI
                 });
             });
 
-            services.AddDbContext<ConnectedOfficeContext>(options => options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
+            services.AddDbContext<ConnectedOfficeContext>(options => options.UseSqlServer(this.Configuration.GetConnectionString("ConnectedOfficeDB")));
             services.AddSwaggerGen(options => { options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Connected Office API", Version = "v1", Description = "Live Connected Office API", }); });
             // For Entity Framework  
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ConnStr")));

@@ -11,7 +11,7 @@ using ConnectedOfficeAPI.Authentication;
 
 namespace ConnectedOfficeAPI.Controllers
 {
-    [Authorize(Roles = UserRoles.Admin)]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase
@@ -164,10 +164,18 @@ namespace ConnectedOfficeAPI.Controllers
         }
 
         [HttpGet("{id}/Zones/Count")]
-        public async Task<IEnumerable<ActionResult<Zone>>> GetZonesByCategory(Guid id)
+        public ValueTask<String> GetZonesByCategory(Guid id)
         {
-           
+            if(CategoryExists(id))
+            {
+                return new ValueTask<String>(_context.Device.Where(a => a.CategoryId == a.ZoneId).Count().ToString());
+            }
+            else
+            {
+                return new ValueTask<String>(NotFound().ToString());
+            }
         }
+
         private bool CategoryExists(Guid id)
         {
             return _context.Category.Any(e => e.CategoryId == id);
