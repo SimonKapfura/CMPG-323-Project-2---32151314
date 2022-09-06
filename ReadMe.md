@@ -84,6 +84,34 @@ The following information is from Mozilla.org (2022)
 - Mozilla.org. (2022). PATCH - HTTP | MDN. [online] Available at: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PATCH [Accessed 2 Sep. 2022].
 - Mozilla.org. (2022). POST - HTTP | MDN. [online] Available at: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST [Accessed 2 Sep. 2022].
 ‌- Mozilla.org. (2022). GET - HTTP | MDN. [online] Available at: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET [Accessed 2 Sep. 2022].
+- Jackson, D. (2017). services.AddSwaggerGen() giving error. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/43707733/services-addswaggergen-giving-error [Accessed 5 Sep. 2022].
+- domaindrivendev (2021). Swashbuckle.AspNetCore.Cli 6.0.4 does not work for .NET Core 3.1 projects · Issue #2006 · domaindrivendev/Swashbuckle.AspNetCore. [online] GitHub. Available at: https://github.com/domaindrivendev/Swashbuckle.AspNetCore/issues/2006 [Accessed 6 Sep. 2022].
+- dotnet (2020). Failed to generate swagger.json with Swashbuckle · Issue #20330 · dotnet/AspNetCore.Docs. [online] GitHub. Available at: https://github.com/dotnet/AspNetCore.Docs/issues/20330 [Accessed 6 Sep. 2022].
+- LightToTheEnd (2016). ‘Build failed’ on Database First Scaffold-DbContext. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/38961115/build-failed-on-database-first-scaffold-dbcontext [Accessed 1 Sep. 2022].
+- Rick-Anderson (2021). Getting Started - EF Core. [online] Microsoft.com. Available at: https://docs.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=netcore-cli [Accessed 2 Sep. 2022].
+- Gaander (2018). Azure Web Deploy ‘Publish Failed’. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/51926402/azure-web-deploy-publish-failed [Accessed 4 Sep. 2022].
+- VanMSFT (2022). IP firewall rules - Azure SQL Database and Azure Synapse Analytics. [online] Microsoft.com. Available at: https://docs.microsoft.com/en-us/azure/azure-sql/database/firewall-configure?view=azuresql [Accessed 3 Sep. 2022].
+- VanMSFT (2022). IP firewall rules - Azure SQL Database and Azure Synapse Analytics. [online] Microsoft.com. Available at: https://docs.microsoft.com/en-us/azure/azure-sql/database/firewall-configure?view=azuresql#create-and-manage-ip-firewall-rules [Accessed 3 Sep. 2022].
+- IronAces (2017). EF Code first Keyword not supported: ‘provider’. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/44547572/ef-code-first-keyword-not-supported-provider [Accessed 6 Sep. 2022].
+- amiry jd (2022). A named connection string was used, but the name ‘DefaultConnection’ was not found in the application’s configuration. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/70958355/a-named-connection-string-was-used-but-the-name-defaultconnection-was-not-fou [Accessed 3 Sep. 2022].
+- Rick-Anderson (2022). Configuration in ASP.NET Core. [online] Microsoft.com. Available at: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-6.0 [Accessed 3 Sep. 2022].
+
+‌
+
+‌
+
+‌
+
+‌
+‌
+
+‌
+
+‌
+
+‌
+
+‌
 
 ‌
 ‌
