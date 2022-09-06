@@ -38,9 +38,9 @@ namespace ConnectedOfficeAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("name=ConnectionStrings:ConnStr"));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection"));
 
-            services.AddDbContext<ConnectedOfficeContext>(options => options.UseSqlServer("name=ConnectionStrings:ConnStr"));
+            services.AddDbContext<ConnectedOfficeContext>(options => options.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection"));
 
             services.AddSwaggerGen(options => {
                 options.SwaggerDoc("v2", new OpenApiInfo
