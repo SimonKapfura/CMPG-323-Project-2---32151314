@@ -28,7 +28,7 @@ namespace ConnectedOfficeAPI.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("name=ConnectionStrings:DefaultConnection");
+                optionsBuilder.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection");
             }
         }
 
