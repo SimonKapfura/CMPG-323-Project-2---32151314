@@ -95,6 +95,7 @@ The following information is from Mozilla.org (2022)
 - IronAces (2017). EF Code first Keyword not supported: ‘provider’. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/44547572/ef-code-first-keyword-not-supported-provider [Accessed 6 Sep. 2022].
 - amiry jd (2022). A named connection string was used, but the name ‘DefaultConnection’ was not found in the application’s configuration. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/70958355/a-named-connection-string-was-used-but-the-name-defaultconnection-was-not-fou [Accessed 3 Sep. 2022].
 - Rick-Anderson (2022). Configuration in ASP.NET Core. [online] Microsoft.com. Available at: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-6.0 [Accessed 3 Sep. 2022].
+- Manan Ghadawala (2020). How JWT Helps in Securing Your API. [online] Appknox.com. Available at: https://www.appknox.com/blog/how-jwt-helps-in-securing-your-api [Accessed 2 Sep. 2022].
 
 ‌
 
