@@ -43,32 +43,49 @@ The following information is from Mozilla.org (2022)
 -     GET: api/Categories -for all categories
 -     GET: api/Zones -for all zones
 -     GET: api/Devices for all devices
+- Then click on the button "Try it out" then the api will respond with a 200 OK if successful or another code listed in the table above.
 ##  Access specific information with specific ID
 - To view a specific item in a specific data set , categories, zones or devices, tap the API method structured like:
 -     GET: api/Categories/{id} -for a specific category
 -     GET: api/Zones/{id} -for a specific zone
 -     GET: api/Devices/{id} -for a specific device
+- Then click on the button "Try it out" then enter the id for the specif item you want to get then the api will respond with a 200 OK if successful or another code listed in the table above.
 ## Add new device, zone or category:
 - To add data set , categories, zones or devices, tap the API method structured like:
 -     POST: api/Categories -for a specific category
 -     POST: api/Zones -for a specific zone
 -     POST: api/Devices -for a specific device
+- Then click on the button "Try it out"
+- Enter required attributes for each section.
+- For Category, required attributes are: Category name and category description, category id and date created will be automatically generated.
+- For Device, required attributes are: Category name and category description, category id and date created will be automatically generated.
+- For Zone, required attributes are: device name and status, device id and date created will be automatically generated, along with linked attributes like category and zone.
+- Click on the "Execute" 
+- Then the api will respond with a 200 OK if successful or another code listed in the table above.
 ## Replace or Update device, zone or category:
 - To replace data set , categories, zones or devices, tap the API method structured like:
 -     PUT: api/Categories/{id} -for a specific category
 -     PUT: api/Zones/{id} -for a specific zone
 -     PUT: api/Devices/{id} -for a specific device
+- Then click on the button "Try it out"
+- Enter the id of the item to add then click on the button "Execute"
+- Then the api will respond with a 200 OK if successful or another code listed in the table above.
 ## Delete a device, zone or category:
 - To delete an item in data set , categories, zones or devices, tap the API method structured like:
 -     DELETE: api/Categories/{id} -for a specific category
 -     DELETE: api/Zones/{id} -for a specific zone
 -     DELETE: api/Devices/{id} -for a specific device
+- Then click on the button "Try it out"
+- Enter the id of the item to delete then click on the button "Execute"
+- Then the api will respond with a 200 OK if successful or another code listed in the table above.
 ## Update a device, zone or category:
 - To update an item in data set , categories, zones or devices, tap the API method structured like:
 -     PATCH: api/Categories/{id} -for a specific category
 -     PATCH: api/Zones/{id} -for a specific zone
 -     PATCH: api/Devices/{id} -for a specific device
-
+- Then click on the button "Try it out"
+- Enter the id of the item to update then click on the button "Execute"
+- Then the api will respond with a 200 OK if successful or another code listed in the table above.
 
 # Reference List
 - 262588213843476 (2018). Gitignore file to ignore the local appSettings. [online] Gist. Available at: https://gist.github.com/ankitvijay/21b45c70e00846d5ce738005fae0372b [Accessed 3 Sep. 2022].
